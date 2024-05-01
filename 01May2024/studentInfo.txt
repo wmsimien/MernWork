@@ -1,0 +1,1 @@
+{"name":"maemae","age":"25","address":"somewhere","session":"mernstack"}

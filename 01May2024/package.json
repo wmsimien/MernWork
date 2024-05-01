@@ -1,0 +1,15 @@
+{
+  "name": "may01",
+  "version": "1.0.0",
+  "description": "Assessment NodeAPI and ES6",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Wanda Avery",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
