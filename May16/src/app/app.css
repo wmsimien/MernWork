@@ -1,0 +1,54 @@
+* {
+  margin: 2px;
+  padding: 2px;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background-color: beige;
+}
+h3 {
+  color: blue;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.ans {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+button {
+  background-color: #008cba;
+  border: sold 10px black;
+  border-radius: 1rem;
+  color: yellow;
+  padding: 15px 32px;
+  margin-right: 5px;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: aliceblue;
+  color: gray;
+}
+
+input {
+  margin-top: 5px;
+  background-color: antiquewhite;
+}
+
+h2 {
+  width: 85%;
+  background-color: purple;
+  text-align: center;
+  text-transform: uppercase;
+  color: wheat;
+  border-radius: 0.5rem;
+}
