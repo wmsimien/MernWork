@@ -1,0 +1,41 @@
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-left: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.iconImg {
+  width: 20px;
+  height: 20px;
+}
+
+.iconImg-notice {
+  width: 20px;
+  height: 20px;
+}
+
+.notices {
+  position: absolute;
+  top: 150px;
+  left: 110px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.notice {
+  padding: 2px;
+  font-size: 14px;
+}
+
+.noticeBtn {
+  width: 30%;
+  padding: 2px;
+  margin: 5px;
+  align-self: center;
+}

@@ -1,0 +1,15 @@
+.toast-container {
+  background-color: hsl(120, 83%, 49%);
+  color: white;
+  position: fixed;
+  top: 200px;
+  left: 300px;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 100;
+  transform: translateX(-680px);
+}
+
+.toast-container.show {
+  transform: translate(0);
+}

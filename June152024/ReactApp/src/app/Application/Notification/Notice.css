@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  gap: 10px;
+  width: 85%;
+}
+
+.parentDiv {
+  width: 100%;
+  text-align: left;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+  .parentDiv {
+    height: 9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
