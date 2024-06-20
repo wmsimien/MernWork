@@ -40,13 +40,17 @@ recentOrdersRouter.post('/api/createOrder', (req, res) => {
 });
 
 recentOrdersRouter.post('/api/recentOrders', (req, res) => {
-  console.log('show all orders for user: ', req.body);
-  console.log('show all orders for userId: ', req.body._id);
+  console.log('show all orders for user - recentOrders: ', req.body);
+  console.log(
+    'show all orders for userId - recentOrders: ',
+    req.body.existingUser._id
+  );
 
   RecentOrdersModel.find({
-    'user._id': req.body._id,
+    'user._id': req.body.existingUser._id,
   })
     .then((allRecentOrders) => {
+      console.log('allRecentOrders - recentOrders: ', allRecentOrders);
       res.send(allRecentOrders);
     })
     .catch((error) => {
