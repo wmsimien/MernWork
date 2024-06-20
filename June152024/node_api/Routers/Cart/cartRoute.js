@@ -4,10 +4,10 @@ let CartDataModel = require('../../DataModels/CartDataModel');
 
 cartRouter.post('/api/createCart', (req, res) => {
   console.log('req.body in createCart: ', req.body);
-  console.log('cartUser: ', req.body.user.existingUser);
+  console.log('cartUser: ', req.body.user);
 
   CartDataModel.findOne({
-    'user._id': req.body.user.existingUser._id,
+    'user._id': req.body.user._id,
     status: 'open',
   })
     .then((foundCart) => {
@@ -16,7 +16,7 @@ cartRouter.post('/api/createCart', (req, res) => {
 
         CartDataModel.findOneAndUpdate(
           {
-            'user.userName': req.body.user.existingUser.userName,
+            'user.userName': req.body.user.userName,
             status: 'open',
             'products._id': req.body.cart._id,
           },
@@ -29,7 +29,7 @@ cartRouter.post('/api/createCart', (req, res) => {
             console.log('Not foundItemInCard: ', req.body.cart);
             CartDataModel.updateOne(
               {
-                'user.userName': req.body.user.existingUser.userName,
+                'user.userName': req.body.user.userName,
                 status: 'open',
               },
               {
@@ -51,7 +51,7 @@ cartRouter.post('/api/createCart', (req, res) => {
       } else {
         // create new create and then add product
         let newCart = new CartDataModel({
-          user: req.body.user.existingUser,
+          user: req.body.user,
           products: req.body.cart,
         });
         console.log('Cart created successfully ', newCart);
