@@ -10,9 +10,9 @@ import { login } from '../../../state/User/userAction';
 import './UserLogin.css';
 
 const UserLogin = () => {
-  let userLogin = useSelector((store) => store.userLoginReducer.userInfo);
+  // let userLogin = useSelector((store) => store.userLoginReducer.userInfo);
 
-  let cart = useSelector((store) => store.cartReducer.cart);
+  // let cart = useSelector((store) => store.cartReducer.cart);
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

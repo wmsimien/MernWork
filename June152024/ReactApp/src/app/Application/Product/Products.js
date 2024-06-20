@@ -13,10 +13,12 @@ import { Link } from 'react-router-dom';
 function Products() {
   const products = useSelector((store) => store.productReducer.product);
 
-  let userLogin = useSelector((store) => store.userLoginReducer.userInfo);
+  // let userLogin = useSelector((store) => store.userLoginReducer.userInfo);
+  const user = useSelector((store) => store.userLoginReducer.userInfo);
+  const userLogin = user && user.existingUser ? user?.existingUser : '';
 
   let cart = useSelector((store) => store.cartReducer.cart);
-  console.log('cart: ', cart);
+  // console.log('cart in products: ', cart);
   let dispatchToDB = useDispatch();
 
   let addToCart = (product) => {
@@ -24,19 +26,14 @@ function Products() {
       user: userLogin,
       cart: product,
     };
-    console.log('add product to shoppingCart: ', shoppingCart);
+    // console.log('add product to shoppingCart: ', shoppingCart);
     dispatchToDB(SaveCartToDB(shoppingCart));
-    // setTimeout(() => {
-    //   dispatchToDB(ViewUserShoppingCart(userLogin));
-    // }, 1000);
-    // dispatchToDB(ViewUserShoppingCart(userLogin));
-    // dispatchToDB(listProducts());
   };
 
   let updateIcon = () => {
     dispatchToDB(ViewUserShoppingCart(userLogin));
   };
-
+  // console.log('userLogin in products: ', userLogin);
   useEffect(() => {
     dispatchToDB(listProducts());
   }, [dispatchToDB]);
@@ -74,10 +71,7 @@ function Products() {
                   <Button variant="primary" onClick={() => addToCart(product)}>
                     Add To Cart
                   </Button>
-                  {/* <Button variant="primary" onClick={() => updateIcon()}>
-                    update icon
-                  </Button> */}
-                  {userLogin?.userName === 'admin' && (
+                  {userLogin?.userName === 'admin2' && (
                     <Button variant="warning">
                       <Link to={`/editProduct/${product._id}`}>
                         Edit Product

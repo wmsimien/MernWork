@@ -102,6 +102,7 @@ export const ViewShoppingCart = () => {
 };
 
 export const ViewUserShoppingCart = (user) => {
+  console.log('user in cart action: ', user);
   return (dispatch) => {
     axios
       .post(`http://localhost:9000/cart/api/userCart`, user)

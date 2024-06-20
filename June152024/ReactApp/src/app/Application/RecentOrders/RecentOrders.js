@@ -42,7 +42,11 @@ import {
 import { ViewUserShoppingCart } from '../../../state/Cart/cartAction';
 
 const RecentOrders = () => {
-  const loginUser = useSelector((store) => store.userLoginReducer.userInfo);
+  // const loginUser = useSelector((store) => store.userLoginReducer.userInfo);
+
+  const user = useSelector((store) => store.userLoginReducer.userInfo);
+  const loginUser = user && user.existingUser ? user?.existingUser : '';
+
   const listRecentOrders = useSelector(
     (store) => store.recentOrdersListReducer.recentOrders
   );

@@ -6,7 +6,11 @@ import { logout } from '../../../state/User/userAction';
 import { ViewUserShoppingCart } from '../../../state/Cart/cartAction';
 
 function UserLogout() {
-  let userLogin = useSelector((store) => store.userLoginReducer.userInfo);
+  // let userLogin = useSelector((store) => store.userLoginReducer.userInfo);
+
+  const user = useSelector((store) => store.userLoginReducer.userInfo);
+  const userLogin = user && user.existingUser ? user?.existingUser : '';
+
   console.log('user:', userLogin);
 
   let cart = useSelector((store) => store.cartReducer.cart);

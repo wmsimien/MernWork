@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 
@@ -8,15 +8,12 @@ import Products from './Products';
 import { ViewUserShoppingCart } from '../../../state/Cart/cartAction';
 
 function ProductListing() {
-  const location = useLocation();
+  const user = useSelector((store) => store.userLoginReducer.userInfo);
+  const userLogin = user && user.existingUser ? user?.existingUser : '';
 
-  const userId = JSON.parse(localStorage.getItem('userInfo'));
+  const cart = useSelector((store) => store.cartReducer.cart);
 
-  let userLogin = useSelector((store) => store.userLoginReducer.userInfo);
-
-  let cart = useSelector((store) => store.cartReducer.cart);
-
-  let dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(ViewUserShoppingCart(userLogin));
@@ -25,7 +22,7 @@ function ProductListing() {
   return (
     <div>
       <Container>
-        {userLogin?.userName === 'admin' && (
+        {userLogin?.userName === 'admin2' && (
           <Button variant="warning" size="sm">
             <Link to="/addProduct">Add Product</Link>
           </Button>

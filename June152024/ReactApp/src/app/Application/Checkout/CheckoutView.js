@@ -14,7 +14,11 @@ import Coupon from '../Coupon/Coupon';
 
 const CheckoutView = () => {
   let cart = useSelector((store) => store.cartReducer.cart);
-  const loginUser = useSelector((store) => store.userLoginReducer.userInfo);
+  // const loginUser = useSelector((store) => store.userLoginReducer.userInfo);
+
+  const user = useSelector((store) => store.userLoginReducer.userInfo);
+  const loginUser = user && user.existingUser ? user?.existingUser : '';
+
   // console.log('userLogin:', loginUser);
 
   let dispatchToDB = useDispatch();
@@ -22,22 +26,8 @@ const CheckoutView = () => {
   const [isShowMsg, setIsShowMsg] = useState(true);
 
   let showCart = () => {
-    // console.log('show cart');
-    // dispatchToDB(ViewShoppingCart());
     dispatchToDB(ViewUserShoppingCart(loginUser));
   };
-
-  // let removeItem = (item) => {
-  //   let filetedShoppedItems = shoppedItems.filter((p) => p._id != item._id);
-
-  //   let updatedShoppingCard = {
-  //     user: userLogin,
-  //     cart: filetedShoppedItems,
-  //   };
-
-  //   dispatchToDB(RemovedFromCart(updatedShoppingCard));
-  //   showCart();
-  // };
 
   useEffect(() => {
     showCart();

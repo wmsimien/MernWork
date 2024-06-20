@@ -4,7 +4,11 @@ import { useSelector } from 'react-redux';
 import Card from 'react-bootstrap/Card';
 
 const UserDetailsView = () => {
-  let userLogin = useSelector((store) => store.userLoginReducer.userInfo);
+  // let userLogin = useSelector((store) => store.userLoginReducer.userInfo);
+
+  const user = useSelector((store) => store.userLoginReducer.userInfo);
+  const userLogin = user && user.existingUser ? user?.existingUser : '';
+
   // console.log('userLogin:', userLogin);
   //   const { userName, street, mobile } = userLogin;
 

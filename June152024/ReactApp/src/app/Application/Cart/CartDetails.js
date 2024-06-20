@@ -15,8 +15,18 @@ import {
 
 function CartDetails() {
   let cart = useSelector((store) => store.cartReducer.cart);
-  const loginUser = useSelector((store) => store.userLoginReducer.userInfo);
+  // const loginUser = useSelector((store) => store.userLoginReducer.userInfo);
+
+  const user = useSelector((store) => store.userLoginReducer.userInfo);
+  const loginUser = user && user.existingUser ? user?.existingUser : '';
+
   let dispatchToDB = useDispatch();
+
+  /**
+   let user = useSelector((store) => store.userLoginReducer.userInfo);
+  const userName =
+    user && user.existingUser ? user?.existingUser.userName : props.userName;
+   */
 
   let showCart = () => {
     dispatchToDB(ViewUserShoppingCart(loginUser));
@@ -31,7 +41,6 @@ function CartDetails() {
     };
 
     dispatchToDB(RemovedFromCart(updatedShoppingCard));
-    // dispatchToDB(ViewUserShoppingCart(loginUser));
   };
 
   useEffect(() => {
