@@ -1,0 +1,29 @@
+.menu {
+  background-color: #b2e4f6;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 200;
+  color: hsl(0, 2%, 53%);
+  text-transform: uppercase;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.listItem:hover {
+  background-color: hsl(0, 11%, 78%);
+}

@@ -1,0 +1,17 @@
+.charts-svg {
+  background: #eee;
+  overflow: visible;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.charts-svg button {
+  margin-bottom: 5px;
+}
+
+.charts-header {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}

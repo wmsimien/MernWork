@@ -1,0 +1,21 @@
+.logout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 60px auto;
+}
+
+.logout-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 62px;
+  margin-top: 27px;
+  color: #797979;
+  font-size: 18px;
+}
+
+.logout-links span {
+  font-style: italic;
+}

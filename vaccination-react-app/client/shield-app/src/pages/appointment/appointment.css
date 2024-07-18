@@ -1,0 +1,18 @@
+.appt-search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+}
+
+.appt-search-container h1 {
+  margin: 15px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appt-search-container form button {
+  width: 100%;
+  margin-bottom: 5px;
+}

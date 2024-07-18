@@ -1,0 +1,11 @@
+.apptHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.apptTbl {
+  height: 100%;
+  display: block;
+}

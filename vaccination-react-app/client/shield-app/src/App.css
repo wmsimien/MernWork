@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* color: rgb(129, 119, 119); */
+}
+
+/* .App {
+  height: 100%;
+  width: 100%;
+} */
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  /* 7.18.2024 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  /* flex-basis: auto; */
+  padding: 20px 10px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  /* 7.18.2024 */
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.menuContainer {
+  padding: 5px 20px;
+  width: 250px;
+  border-right: 2px solid #b8d8e3;
+}
+
+.contentContainer {
+  padding: 5px 20px;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .container {
+    left: 58px;
+    top: 130px;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .contentContainer {
+  }
+}
+
+@media (max-width: 780px) {
+  .contentContainer {
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentContainer {
+  }
+}
+
+@media (max-width: 1200px) {
+  .contentContainer {
+  }
+}
+
+@media (max-width: 1400px) {
+  .contentContainer {
+  }
+} */

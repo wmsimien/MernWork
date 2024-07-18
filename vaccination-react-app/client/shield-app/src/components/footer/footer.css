@@ -1,0 +1,37 @@
+.footer-container {
+  display: flex;
+  position: relative;
+  min-height: 10vh;
+  /* display: flex; */
+
+  /* min-height: 50vh;
+  position: relative;
+  left: 0;
+   */
+  bottom: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 250px;
+  padding: 40px;
+
+  /* background-color: hsl(235, 20%, 88%);
+  position: fixed;
+  padding: 30px;
+  left: 0;
+  width: 100%; */
+  /* top: 920px; */
+}
+
+.footer span:first-child {
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.footer span:last-child {
+  font-size: 14px;
+  float: right;
+}

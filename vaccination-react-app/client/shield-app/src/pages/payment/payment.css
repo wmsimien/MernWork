@@ -1,0 +1,17 @@
+.qrcode-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 800px;
+}
+
+.qrcode-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrCode {
+  margin: 5px 0 0 50px;
+}
