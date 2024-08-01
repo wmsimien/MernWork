@@ -1,0 +1,16 @@
+.table {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 350px;
+}
+
+.table thead tr th,
+.table tbody tr td {
+  text-align: left;
+}
+
+.pagination {
+  display: flex;
+  margin: 5px;
+  gap: 5px;
+}
