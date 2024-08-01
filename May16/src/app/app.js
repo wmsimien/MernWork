@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import Success from './components/Success';
-import UserSignIn from './components/UserSignIn';
+import React, { Component } from "react";
+import Success from "./components/Success";
+import UserSignIn from "./components/UserSignIn";
 
-import './app.css';
-import ClassLifecycle from './components/ClassLifecycle';
+import "./app.css";
+import ClassLifecycle from "./components/ClassLifecycle";
 
 export class App extends Component {
   constructor(props) {
-    console.log('App: constructor called');
+    console.log("App: constructor called");
     super(props);
 
     // initialize some state
@@ -43,7 +43,8 @@ export class App extends Component {
 
         <Success />
         <UserSignIn />
-
+        {/*  when a component is removed from or taken out of the DOM
+             componentWillUnmount is called */}
         <button
           className="mount"
           onClick={this.mountCounter}
